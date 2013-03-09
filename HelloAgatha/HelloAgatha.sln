@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agatha.Model", "Agatha.Model\Agatha.Model.csproj", "{4E93296F-385F-4E3C-B869-77B93E40DA93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agatha.Service", "Agatha.Service\Agatha.Service.csproj", "{4E95BFE5-3967-4AF8-8831-8B60007D29A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agatha.ServiceHost", "Agatha.ServiceHost\Agatha.ServiceHost.csproj", "{4492B8B3-C76C-4C58-A2DF-9385B41B8008}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agatha.Client", "Agatha.Client\Agatha.Client.csproj", "{E2EAF90B-EF08-43B5-A293-58192E824DD7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4492B8B3-C76C-4C58-A2DF-9385B41B8008} = {4492B8B3-C76C-4C58-A2DF-9385B41B8008}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E93296F-385F-4E3C-B869-77B93E40DA93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E93296F-385F-4E3C-B869-77B93E40DA93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E93296F-385F-4E3C-B869-77B93E40DA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E93296F-385F-4E3C-B869-77B93E40DA93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E95BFE5-3967-4AF8-8831-8B60007D29A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E95BFE5-3967-4AF8-8831-8B60007D29A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E95BFE5-3967-4AF8-8831-8B60007D29A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E95BFE5-3967-4AF8-8831-8B60007D29A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4492B8B3-C76C-4C58-A2DF-9385B41B8008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4492B8B3-C76C-4C58-A2DF-9385B41B8008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4492B8B3-C76C-4C58-A2DF-9385B41B8008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4492B8B3-C76C-4C58-A2DF-9385B41B8008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2EAF90B-EF08-43B5-A293-58192E824DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2EAF90B-EF08-43B5-A293-58192E824DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2EAF90B-EF08-43B5-A293-58192E824DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2EAF90B-EF08-43B5-A293-58192E824DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Agatha-rrsl</id>
+    <version>1.2.0</version>
+    <title>Agatha-rrsl</title>
+    <authors>David Bryon</authors>
+    <owners>David Bryon</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Request/Response Service Layer for .NET</description>
+    <summary>Request/Response Service Layer for .NET</summary>
+    <references>
+      <reference file="Agatha.Common.dll" />
+      <reference file="Agatha.ServiceLayer.dll" />
+      <reference file="Common.Logging.dll" />
+      <reference file="Agatha.Common.Silverlight.dll" />
+      <reference file="Agatha.ServiceLayer.Silverlight.dll" />
+    </references>
+  </metadata>
+</package>
