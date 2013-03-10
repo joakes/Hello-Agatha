@@ -9,3 +9,7 @@ Experimenting with the Agatha rrsl
   - Allows request types to specify whether the response can be returned from the cache or if we should request 
     a fresh response object
   - Seems to be working for both CLIENT and SERVER side caching :)
+
+* Added Agatha.Web to experiment with dynamically loading user controls using an MVP pattern
+  - Talks to a new Agatha handler (WelcomeMessageHandler) to prove we can talk to services from our presenter 
+  - TODO: find a cleaner way to resolve dependencies in the control and the presenter
