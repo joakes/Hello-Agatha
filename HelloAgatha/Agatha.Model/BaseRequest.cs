@@ -5,10 +5,12 @@
 
     // See http://thatextramile.be/blog/2010/06/using-agathas-server-side-caching
 
-    public abstract class BaseRequest : Request
+    public abstract class BaseRequest : Request, ICanInvalidateCaching
     {
         private readonly Type _actualType;
         private readonly string _cacheKey;
+
+        public bool InvalidateCache { get; set; }
 
         protected BaseRequest(string cacheKey) : this()
         {
