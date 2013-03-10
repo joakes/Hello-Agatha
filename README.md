@@ -13,3 +13,4 @@ Experimenting with the Agatha rrsl
 * Added Agatha.Web to experiment with dynamically loading user controls using an MVP pattern
   - Talks to a new Agatha handler (WelcomeMessageHandler) to prove we can talk to services from our presenter 
   - TODO: find a cleaner way to resolve dependencies in the control and the presenter
+
