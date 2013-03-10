@@ -2,6 +2,7 @@
 {
     using System.Reflection;
     using Model;
+    using Model.Infrastructure;
     using ServiceLayer;
 
     public static class ComponentRegistration

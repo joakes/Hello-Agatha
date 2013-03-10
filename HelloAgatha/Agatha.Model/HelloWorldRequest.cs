@@ -1,6 +1,7 @@
 ﻿namespace Agatha.Model
 {
     using Common;
+    using Infrastructure;
 
     [EnableServiceResponseCaching(Seconds = 60, Region = "HelloWorldRequest")]
     [EnableClientResponseCaching(Seconds = 60, Region = "HelloWorldRequest")]

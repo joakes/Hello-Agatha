@@ -5,6 +5,7 @@
     using Common;
     using Common.InversionOfControl;
     using Model;
+    using Model.Infrastructure;
 
     class Program
     {
