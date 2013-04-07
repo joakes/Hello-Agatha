@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agatha.Client", "Agatha.Cli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agatha.Web", "Agatha.Web\Agatha.Web.csproj", "{4E6FDBB1-5961-448F-BE98-0A95DC6F274A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agatha.Model.Tests", "Agatha.Model.Tests\Agatha.Model.Tests.csproj", "{95CDD49E-53E4-4E92-94DA-D4A135C8E1B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{4E6FDBB1-5961-448F-BE98-0A95DC6F274A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E6FDBB1-5961-448F-BE98-0A95DC6F274A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E6FDBB1-5961-448F-BE98-0A95DC6F274A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95CDD49E-53E4-4E92-94DA-D4A135C8E1B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95CDD49E-53E4-4E92-94DA-D4A135C8E1B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95CDD49E-53E4-4E92-94DA-D4A135C8E1B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95CDD49E-53E4-4E92-94DA-D4A135C8E1B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

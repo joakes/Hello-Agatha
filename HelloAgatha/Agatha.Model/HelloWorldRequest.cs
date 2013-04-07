@@ -1,17 +1,18 @@
-﻿namespace Agatha.Model
+﻿using System.Collections.Generic;
+using Agatha.Common;
+
+namespace Agatha.Model
 {
-    using Common;
     using Infrastructure;
 
-    [EnableServiceResponseCaching(Seconds = 60, Region = "HelloWorldRequest")]
-    [EnableClientResponseCaching(Seconds = 60, Region = "HelloWorldRequest")]
-    public class HelloWorldRequest : BaseRequest
+    [EnableClientResponseCaching(Hours = 60, Region = "Worlds")]
+    public class HelloWorldRequest : CachableRequest
     {
         public HelloWorldRequest() { } // required for serialization
 
-        public HelloWorldRequest(string memberNumber) : base(memberNumber)
+        public HelloWorldRequest(string memberNumber)
         {
-            
+            MemberNumber = memberNumber;
         }
     }
 }

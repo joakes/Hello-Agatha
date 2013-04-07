@@ -1,4 +1,7 @@
-﻿namespace Agatha.Service
+﻿using Agatha.Common;
+using Agatha.Model.Infrastructure;
+
+namespace Agatha.Service
 {
     using System;
     using System.Globalization;
@@ -21,6 +24,7 @@
         public override void Load()
         {
             Bind<IFoo>().To<Foo>();
+            Bind<ICacheInvalidator>().To<CacheInvalidator>();
         }
     }
 

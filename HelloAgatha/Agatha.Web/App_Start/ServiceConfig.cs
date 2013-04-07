@@ -12,7 +12,7 @@
             var container = new Ninject.Container(kernel);
             var config = new ClientConfiguration(typeof(HelloWorldRequest).Assembly, container)
             {
-                CacheManagerImplementation = typeof(InvalidatingCacheManager)
+                RequestDispatcherImplementation = typeof(InvalidatableRequestDispatcher)
             };
             config.Initialize();
         }

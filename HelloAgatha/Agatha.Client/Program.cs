@@ -1,4 +1,6 @@
-﻿namespace Agatha.Client
+﻿using Agatha.Service;
+
+namespace Agatha.Client
 {
     using System;
     using System.Threading;
@@ -23,15 +25,23 @@
         private static void GetMessage(bool invalidateCache)
         {
             var requestDispatcher = IoC.Container.Resolve<IRequestDispatcher>();
-            var response = requestDispatcher.Get<HelloWorldResponse>(new HelloWorldRequest("123456") { InvalidateCache = invalidateCache });
+
+            if (invalidateCache)
+            {
+                var resp = requestDispatcher.Get<InvalidateResponse>(new InvalidateHelloWorldRequest("123456"));
+                Console.WriteLine(resp.Message);
+            }
+            requestDispatcher.Clear();
+            var response = requestDispatcher.Get<HelloWorldResponse>(new HelloWorldRequest("123456"));
             Console.WriteLine(response.Message);
         }
 
         private static void InitializeAgatha()
         {
-            var config = new ClientConfiguration(typeof(HelloWorldRequest).Assembly, typeof(Ninject.Container))
+            var container = new Ninject.Container(Container.Kernel);
+            var config = new ClientConfiguration(typeof(HelloWorldRequest).Assembly, container)
                              {
-                                 CacheManagerImplementation = typeof(InvalidatingCacheManager)
+                                 RequestDispatcherImplementation = typeof(InvalidatableRequestDispatcher)
                              };
             config.Initialize();
         }

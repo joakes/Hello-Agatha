@@ -70,6 +70,10 @@
       <Project>{4e93296f-385f-4e3c-b869-77b93e40da93}</Project>
       <Name>Agatha.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Agatha.Service\Agatha.Service.csproj">
+      <Project>{4E95BFE5-3967-4AF8-8831-8B60007D29A9}</Project>
+      <Name>Agatha.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

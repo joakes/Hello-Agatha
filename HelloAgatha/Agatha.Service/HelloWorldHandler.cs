@@ -7,7 +7,7 @@
     {
         private readonly IFoo _foo;
 
-        public HelloWorldHandler(IFoo foo, ICacheManager cacheManager)
+        public HelloWorldHandler(IFoo foo)
         {
             _foo = foo;
         }

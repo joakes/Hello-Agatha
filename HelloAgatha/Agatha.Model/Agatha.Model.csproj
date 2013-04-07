@@ -31,7 +31,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Agatha.Common">
-      <HintPath>..\packages\Agatha-rrsl.1.2.0\lib\35\Agatha.Common.dll</HintPath>
+      <HintPath>..\packages\Agatha-Common-Ninject.1.3.1\lib\net40\Agatha.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Agatha.Ninject">
+      <HintPath>..\packages\Agatha-Common-Ninject.1.3.1\lib\net40\Agatha.Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net40\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,14 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\BaseRequest.cs" />
+    <Compile Include="Infrastructure\CachableRequest.cs" />
     <Compile Include="HelloWorldResponse.cs" />
     <Compile Include="HelloWorldRequest.cs" />
-    <Compile Include="Infrastructure\ICanInvalidateCaching.cs" />
-    <Compile Include="Infrastructure\InvalidatingCacheManager.cs" />
+    <Compile Include="Infrastructure\ICacheInvalidator.cs" />
+    <Compile Include="Infrastructure\ICacheInvalidatorInfo.cs" />
+    <Compile Include="Infrastructure\InvalidatableCachingInterceptor.cs" />
+    <Compile Include="Infrastructure\InvalidatableRequestDispatcher.cs" />
+    <Compile Include="InvalidateHelloWorldRequest.cs" />
+    <Compile Include="InvalidateResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WelcomeMessageRequest.cs" />
     <Compile Include="WelcomeMessageResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,3 +1,5 @@
+using Agatha.Model.Infrastructure;
+
 [assembly: WebActivator.PreApplicationStartMethod(typeof(Agatha.Web.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(Agatha.Web.App_Start.NinjectWebCommon), "Stop")]
 
@@ -60,6 +62,7 @@ namespace Agatha.Web.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<WelcomePresenter>().ToSelf();
+            kernel.Bind<ICacheInvalidator>().To<CacheInvalidator>();
         }        
     }
 }

@@ -4,7 +4,7 @@
 
     public abstract class RequestHandler<TRequest, TResponse> : ServiceLayer.RequestHandler<TRequest, TResponse> 
         where TRequest : Request
-        where TResponse : Response
+        where TResponse : Response, new()
     {
         public override Response Handle(TRequest request)
         {
