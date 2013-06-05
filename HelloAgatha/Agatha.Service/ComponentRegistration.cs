@@ -9,10 +9,13 @@ namespace Agatha.Service
         {
             var container = new Ninject.Container(Container.Kernel);
             var config = new ServiceLayer.ServiceLayerConfiguration(
-                    typeof(HelloWorldHandler).Assembly,
-                    typeof(HelloWorldRequest).Assembly,
-                    container)
-                    .RegisterRequestHandlerInterceptor<InvalidatableCachingInterceptor>();
+                typeof (HelloWorldHandler).Assembly,
+                typeof (HelloWorldRequest).Assembly,
+                container)
+                {
+                    CacheManagerImplementation = typeof (MemberSpecificCacheManager)
+                }.RegisterRequestHandlerInterceptor<InvalidatableCachingInterceptor>();
+            
 
             config.Initialize();
         }

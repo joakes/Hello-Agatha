@@ -5,7 +5,7 @@ using Agatha.Model.Infrastructure;
 
 namespace Agatha.Model
 {
-    public class InvalidateHelloWorldRequest : Request, ICacheInvalidatorInfo
+    public class InvalidateHelloWorldRequest : InvalidatingRequest
     {
         public InvalidateHelloWorldRequest() { } // required for serialization
 
@@ -14,10 +14,8 @@ namespace Agatha.Model
             MemberNumber = memberNumber;
         }
 
-        public string MemberNumber { get; set; }
-
-        [IgnoreDataMember]
-        public IEnumerable<string> CacheRegionsToBeInvalidated {
+        protected override IEnumerable<string> BaseRegionsToBeInvalidated
+        {
             get { yield return "Worlds"; }
         }
     }

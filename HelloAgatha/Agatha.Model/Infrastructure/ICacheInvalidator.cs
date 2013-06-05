@@ -19,7 +19,7 @@ namespace Agatha.Model.Infrastructure
 
         public void InvalidateAnyApplicableCacheRegions(Request request)
         {
-            var invalidator = request as ICacheInvalidatorInfo;
+            var invalidator = request as InvalidatingRequest;
 
             if (invalidator == null)
                 return;

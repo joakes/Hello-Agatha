@@ -42,6 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,13 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\CacheKeyGeneration.cs" />
+    <Compile Include="Infrastructure\WebCache.cs" />
     <Compile Include="Infrastructure\CachableRequest.cs" />
     <Compile Include="HelloWorldResponse.cs" />
     <Compile Include="HelloWorldRequest.cs" />
     <Compile Include="Infrastructure\ICacheInvalidator.cs" />
-    <Compile Include="Infrastructure\ICacheInvalidatorInfo.cs" />
     <Compile Include="Infrastructure\InvalidatableCachingInterceptor.cs" />
     <Compile Include="Infrastructure\InvalidatableRequestDispatcher.cs" />
+    <Compile Include="Infrastructure\InvalidatingRequest.cs" />
+    <Compile Include="Infrastructure\MemberSpecificCacheManager.cs" />
+    <Compile Include="Infrastructure\WebCacheCacheProvider.cs" />
     <Compile Include="InvalidateHelloWorldRequest.cs" />
     <Compile Include="InvalidateResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

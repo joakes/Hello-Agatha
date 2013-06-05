@@ -41,7 +41,8 @@ namespace Agatha.Client
             var container = new Ninject.Container(Container.Kernel);
             var config = new ClientConfiguration(typeof(HelloWorldRequest).Assembly, container)
                              {
-                                 RequestDispatcherImplementation = typeof(InvalidatableRequestDispatcher)
+                                 RequestDispatcherImplementation = typeof(InvalidatableRequestDispatcher),
+                                 CacheManagerImplementation = typeof(MemberSpecificCacheManager)
                              };
             config.Initialize();
         }
